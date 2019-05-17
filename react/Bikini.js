@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Col} from 'react-flexbox-grid';
 import styles from './styles.css';
 import classnames from 'classnames';
+import { Link } from 'vtex.render-runtime'
 
 
 export default class Bikini extends Component{
@@ -15,12 +16,12 @@ export default class Bikini extends Component{
 
         return(
             <Col sm={{ size: 'auto'}}>
-                <a href={link} className={styles.link}>
+                <Link to={link} className={styles.link}>
                     <img src={img}></img>
                     <div className="w-100 flex justify-center"><button className={classnames(styles.boton,'ph8 pv5')}>{boton}</button></div>
                     {/* <h2 className= {classnames(styles.subt,'tc')}>{subtitulo}</h2> */}
                     <h2 className={styles.subt}>{subtitulo}</h2>
-                </a>
+                </Link>
             </Col>
         );
     }
